@@ -37,15 +37,18 @@ export default class IntroStoryState extends StateBase {
     this.nextBtn = document.getElementById('storyNext');
     this._showPage(0);
 
-    this.onClick = () => {
-      if (!document.fullscreenElement && this.canvas.requestFullscreen) {
-        this.canvas.requestFullscreen()
-          .then(() => {
-            if (screen.orientation && screen.orientation.lock) {
-              screen.orientation.lock('landscape').catch(() => {});
-            }
-          })
-          .catch(() => {});
+   this.onClick = () => {
+      if (!document.fullscreenElement) {
+        const target = document.documentElement;
+        if (target.requestFullscreen) {
+          target.requestFullscreen()
+            .then(() => {
+              if (screen.orientation && screen.orientation.lock) {
+                screen.orientation.lock('landscape').catch(() => {});
+              }
+            })
+            .catch(() => {});
+        }
       }
       if (this.pageIndex < this.pages.length - 1) {
         this._showPage(++this.pageIndex);
