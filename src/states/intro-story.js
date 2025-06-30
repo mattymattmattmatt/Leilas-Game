@@ -39,7 +39,13 @@ export default class IntroStoryState extends StateBase {
 
     this.onClick = () => {
       if (!document.fullscreenElement && this.canvas.requestFullscreen) {
-        this.canvas.requestFullscreen().catch(()=>{});
+        this.canvas.requestFullscreen()
+          .then(() => {
+            if (screen.orientation && screen.orientation.lock) {
+              screen.orientation.lock('landscape').catch(() => {});
+            }
+          })
+          .catch(() => {});
       }
       if (this.pageIndex < this.pages.length - 1) {
         this._showPage(++this.pageIndex);
