@@ -14,6 +14,7 @@
 //    onExit()          // optional cleanup
 // ============================================================================
 
+import IntroStoryState   from './states/intro-story.js';
 import CharacterSelectState from './states/character-select.js';
 import HeroIntroState       from './states/hero-intro.js';
 import GameplayState        from './states/gameplay.js';
@@ -51,8 +52,8 @@ function changeState(StateClass, payload = null) {
   if (currentState.onEnter) currentState.onEnter(payload);
 }
 
-// Initial boot → character select screen
-changeState(CharacterSelectState);
+// Initial boot → Intro Screen
+changeState(IntroStoryState);   // <-- boot story first
 
 // ---------------------------- Main Loop ------------------------------------
 function gameLoop(time) {
