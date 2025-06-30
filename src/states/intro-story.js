@@ -13,6 +13,11 @@ export default class IntroStoryState extends StateBase {
     this.videoEl = document.getElementById('introVideo');
     this.videoEl.src = 'assets/video/king_loop.mp4';      // add this file
 
+    // show intro elements
+    this.videoEl.style.display = 'block';
+    this.canvas.style.backgroundImage = "url('assets/backgrounds/intro_bg.png')";
+    this.canvas.style.backgroundSize = 'cover';
+
     await this.videoEl.play().catch(()=>{});              // autoplay muted
 
     /* ---------- Text pages ------ */
@@ -33,6 +38,9 @@ export default class IntroStoryState extends StateBase {
     this._showPage(0);
 
     this.onClick = () => {
+      if (!document.fullscreenElement && this.canvas.requestFullscreen) {
+        this.canvas.requestFullscreen().catch(()=>{});
+      }
       if (this.pageIndex < this.pages.length - 1) {
         this._showPage(++this.pageIndex);
       } else {
@@ -56,6 +64,8 @@ export default class IntroStoryState extends StateBase {
     /* clean DOM */
     this.videoEl.pause();
     this.videoEl.style.display = 'none';
+    this.canvas.style.backgroundImage = 'none';
+    this.canvas.style.backgroundSize = '';
     this.panel.removeEventListener('click', this.onClick);
     this.nextBtn.removeEventListener('click', this.onClick);
     document.body.removeChild(this.panel);
@@ -68,6 +78,8 @@ export default class IntroStoryState extends StateBase {
     /* safety: ensure video hidden */
     this.videoEl.pause();
     this.videoEl.style.display = 'none';
+    this.canvas.style.backgroundImage = 'none';
+    this.canvas.style.backgroundSize = '';
   }
 }
 
