@@ -1,118 +1,118 @@
 // ---------------------------------------------------------------------------
-//  characters/sky.js — Full frame manifest for all 8 SKY heroes
+//  characters/land.js — Full frame manifest for all 8 LAND heroes
 // ---------------------------------------------------------------------------
 
 export default [
   {
-    id: 'bo',
-    name: 'Bo',
-    habitat: 'sky',
-    thumb:  'char_bo.webp',
+    id: 'fertle',
+    name: 'Fertle',
+    habitat: 'land',
+    thumb:  'char_fertle.webp',
     frames: {
-      idle:   'char_bo_idle.png',
-      walk1:  'char_bo_walk1.png',
-      walk2:  'char_bo_walk2.png',
-      jump:   'char_bo_jump.png',
-      attack: 'char_bo_attack.png'
+      idle:   'char_fertle_idle.png',
+      walk1:  'char_fertle_walk1.png',
+      walk2:  'char_fertle_walk2.png',
+      jump:   'char_fertle_jump.png',
+      attack: 'char_fertle_attack.png'
     },
-    intro: 'char_bo.mp4'
+    intro: 'char_fertle.mp4'
   },
   {
-    id: 'roger-dodger',
-    name: 'Roger Dodger',
-    habitat: 'sky',
-    thumb:  'char_roger-dodger.webp',
+    id: 'fygar',
+    name: 'Fygar',
+    habitat: 'land',
+    thumb:  'char_fygar.webp',
     frames: {
-      idle:   'char_roger-dodger_idle.png',
-      walk1:  'char_roger-dodger_walk1.png',
-      walk2:  'char_roger-dodger_walk2.png',
-      jump:   'char_roger-dodger_jump.png',
-      attack: 'char_roger-dodger_attack.png'
+      idle:   'char_fygar_idle.png',
+      walk1:  'char_fygar_walk1.png',
+      walk2:  'char_fygar_walk2.png',
+      jump:   'char_fygar_jump.png',
+      attack: 'char_fygar_attack.png'
     },
-    intro: 'char_roger-dodger.mp4'
+    intro: 'char_fygar.mp4'
   },
   {
-    id: 'yellogen',
-    name: 'Yellogen',
-    habitat: 'sky',
-    thumb:  'char_yellogen.webp',
+    id: 'waterwolf',
+    name: 'Waterwolf',
+    habitat: 'land',
+    thumb:  'char_waterwolf.webp',
     frames: {
-      idle:   'char_yellogen_idle.png',
-      walk1:  'char_yellogen_walk1.png',
-      walk2:  'char_yellogen_walk2.png',
-      jump:   'char_yellogen_jump.png',
-      attack: 'char_yellogen_attack.png'
+      idle:   'char_waterwolf_idle.png',
+      walk1:  'char_waterwolf_walk1.png',
+      walk2:  'char_waterwolf_walk2.png',
+      jump:   'char_waterwolf_jump.png',
+      attack: 'char_waterwolf_attack.png'
     },
-    intro: 'char_yellogen.mp4'
+    intro: 'char_waterwolf.mp4'
   },
   {
-    id: 'whipper',
-    name: 'Whipper',
-    habitat: 'sky',
-    thumb:  'char_whipper.webp',
+    id: 'chomper',
+    name: 'Chomper',
+    habitat: 'land',
+    thumb:  'char_chomper.webp',
     frames: {
-      idle:   'char_whipper_idle.png',
-      walk1:  'char_whipper_walk1.png',
-      walk2:  'char_whipper_walk2.png',
-      jump:   'char_whipper_jump.png',
-      attack: 'char_whipper_attack.png'
+      idle:   'char_chomper_idle.png',
+      walk1:  'char_chomper_walk1.png',
+      walk2:  'char_chomper_walk2.png',
+      jump:   'char_chomper_jump.png',
+      attack: 'char_chomper_attack.png'
     },
-    intro: 'char_whipper.mp4'
+    intro: 'char_chomper.mp4'
   },
   {
-    id: 'diver',
-    name: 'Diver',
-    habitat: 'sky',
-    thumb:  'char_diver.webp',
+    id: 'fixie',
+    name: 'Fixie',
+    habitat: 'land',
+    thumb:  'char_fixie.webp',
     frames: {
-      idle:   'char_diver_idle.png',
-      walk1:  'char_diver_walk1.png',
-      walk2:  'char_diver_walk2.png',
-      jump:   'char_diver_jump.png',
-      attack: 'char_diver_attack.png'
+      idle:   'char_fixie_idle.png',
+      walk1:  'char_fixie_walk1.png',
+      walk2:  'char_fixie_walk2.png',
+      jump:   'char_fixie_jump.png',
+      attack: 'char_fixie_attack.png'
     },
-    intro: 'char_diver.mp4'
+    intro: 'char_fixie.mp4'
   },
   {
-    id: 'stinger',
-    name: 'Stinger',
-    habitat: 'sky',
-    thumb:  'char_stinger.webp',
+    id: 'chunky',
+    name: 'Chunky',
+    habitat: 'land',
+    thumb:  'char_chunky.webp',
     frames: {
-      idle:   'char_stinger_idle.png',
-      walk1:  'char_stinger_walk1.png',
-      walk2:  'char_stinger_walk2.png',
-      jump:   'char_stinger_jump.png',
-      attack: 'char_stinger_attack.png'
+      idle:   'char_chunky_idle.png',
+      walk1:  'char_chunky_walk1.png',
+      walk2:  'char_chunky_walk2.png',
+      jump:   'char_chunky_jump.png',
+      attack: 'char_chunky_attack.png'
     },
-    intro: 'char_stinger.mp4'
+    intro: 'char_chunky.mp4'
   },
   {
-    id: 'flick',
-    name: 'Flick',
-    habitat: 'sky',
-    thumb:  'char_flick.webp',
+    id: 'skyjumper',
+    name: 'Skyjumper',
+    habitat: 'land',
+    thumb:  'char_skyjumper.webp',
     frames: {
-      idle:   'char_flick_idle.png',
-      walk1:  'char_flick_walk1.png',
-      walk2:  'char_flick_walk2.png',
-      jump:   'char_flick_jump.png',
-      attack: 'char_flick_attack.png'
+      idle:   'char_skyjumper_idle.png',
+      walk1:  'char_skyjumper_walk1.png',
+      walk2:  'char_skyjumper_walk2.png',
+      jump:   'char_skyjumper_jump.png',
+      attack: 'char_skyjumper_attack.png'
     },
-    intro: 'char_flick.mp4'
+    intro: 'char_skyjumper.mp4'
   },
   {
-    id: 'creeper',
-    name: 'Creeper',
-    habitat: 'sky',
-    thumb:  'char_creeper.webp',
+    id: 'cliggy',
+    name: 'Cliggy',
+    habitat: 'land',
+    thumb:  'char_cliggy.webp',
     frames: {
-      idle:   'char_creeper_idle.png',
-      walk1:  'char_creeper_walk1.png',
-      walk2:  'char_creeper_walk2.png',
-      jump:   'char_creeper_jump.png',
-      attack: 'char_creeper_attack.png'
+      idle:   'char_cliggy_idle.png',
+      walk1:  'char_cliggy_walk1.png',
+      walk2:  'char_cliggy_walk2.png',
+      jump:   'char_cliggy_jump.png',
+      attack: 'char_cliggy_attack.png'
     },
-    intro: 'char_creeper.mp4'
+    intro: 'char_cliggy.mp4'
   }
 ];
