@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Leila's Game</title>
+
+  <!-- Google Fonts (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+        rel="stylesheet" />
+
+  <!-- Main stylesheet (now relative to repo-root) -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Critical fallback styles (can stay here or live in css/style.css) */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;          /* prevent scrolling */
+      background: #000;          /* black bars before canvas fills */
+      font-family: 'Poppins', sans-serif;
+      -webkit-user-select: none; /* disable selection on mobile */
+      user-select: none;
+    }
+    canvas {
+      display: block;
+      background: #222;          /* placeholder; game will draw over */
+    }
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Game Canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- 5-second hero intro video (hidden by default) -->
+  <video id="introVideo" muted playsinline></video>
+
+  <!-- Entry point (ES-module) — note **no leading “/”** -->
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
