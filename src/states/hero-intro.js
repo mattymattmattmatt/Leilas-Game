@@ -25,6 +25,7 @@ export default class HeroIntroState {
     this.character = character;
 
     // Determine video source
+    const id = character.id;
     const clipSrc = ASSETS.intros[id] || `assets/intros/char_${id}.mp4`;
 
     // Prepare & show video element
