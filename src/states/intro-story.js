@@ -37,7 +37,7 @@ export default class IntroStoryState extends StateBase {
     this.nextBtn = document.getElementById('storyNext');
     this._showPage(0);
 
-    this.onClick = () => {
+   this.onClick = () => {
       if (!document.fullscreenElement) {
         const target = document.documentElement;
         if (target.requestFullscreen) {
