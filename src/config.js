@@ -54,9 +54,9 @@ export const ASSETS = {
   },
   // 5‑second hero intro clips
   intros: {
-    fertle: 'assets/intros/intro_fertle.mp4',
-    fygar:  'assets/intros/intro_fygar.mp4',
-    // …
+    fertle: 'assets/intros/char_fertle.mp4',
+    fygar:  'assets/intros/char_fygar.mp4',
+    // additional intros can be placed in assets/intros/char_<id>.mp4
   },
   // UI icons
   ui: {
