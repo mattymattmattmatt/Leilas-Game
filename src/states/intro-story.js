@@ -4,6 +4,7 @@
 // ============================================================================
 
 import StateBase from './state-base.js';
+import CharacterSelectState from './character-select.js';
 
 export default class IntroStoryState extends StateBase {
   async onEnter(params) {
@@ -80,7 +81,7 @@ export default class IntroStoryState extends StateBase {
     document.body.removeChild(this.panel);
 
     /* hand off to character select */
-    this.changeState('characterSelect', {});
+    this.changeState(CharacterSelectState, {});
   }
 
   onExit() {
