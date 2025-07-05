@@ -12,6 +12,7 @@ export default class IntroStoryState extends StateBase {
     this.bgImg.src = 'assets/backgrounds/intro_bg.png';  // add this file
     this.videoEl = document.getElementById('introVideo');
     this.videoEl.src = 'assets/video/king_loop.mp4';      // add this file
+    this.videoEl.loop = true;                             // keep playing
 
     // show intro elements
     this.videoEl.style.display = 'block';
@@ -57,7 +58,6 @@ export default class IntroStoryState extends StateBase {
       }
     };
     this.nextBtn.addEventListener('click', this.onClick);
-    this.panel.addEventListener('click', this.onClick);
   }
 
   /* No update/draw needed – DOM handles visuals */
@@ -72,10 +72,10 @@ export default class IntroStoryState extends StateBase {
   _finish() {
     /* clean DOM */
     this.videoEl.pause();
+    this.videoEl.loop = false;
     this.videoEl.style.display = 'none';
     this.canvas.style.backgroundImage = 'none';
     this.canvas.style.backgroundSize = '';
-    this.panel.removeEventListener('click', this.onClick);
     this.nextBtn.removeEventListener('click', this.onClick);
     document.body.removeChild(this.panel);
 
@@ -86,6 +86,7 @@ export default class IntroStoryState extends StateBase {
   onExit() {
     /* safety: ensure video hidden */
     this.videoEl.pause();
+    this.videoEl.loop = false;
     this.videoEl.style.display = 'none';
     this.canvas.style.backgroundImage = 'none';
     this.canvas.style.backgroundSize = '';
