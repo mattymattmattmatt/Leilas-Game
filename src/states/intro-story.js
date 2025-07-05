@@ -15,12 +15,26 @@ export default class IntroStoryState extends StateBase {
     this.videoEl.src = 'assets/video/king_loop.mp4';      // add this file
     this.videoEl.loop = true;                             // keep playing
 
+    // background music
+    this.bgm = new Audio('assets/audio/bgm_intro.mp3');
+    this.bgm.volume = 0.4;
+    this.bgm.loop = true;
+
     // show intro elements
     this.videoEl.style.display = 'block';
     this.canvas.style.backgroundImage = "url('assets/backgrounds/intro_bg.png')";
     this.canvas.style.backgroundSize = 'cover';
 
     await this.videoEl.play().catch(()=>{});              // autoplay muted
+
+    // attempt to autoplay bgm; may require first user gesture
+    this.bgm.play().catch(() => {
+      const resume = () => {
+        this.bgm.play().catch(()=>{});
+        window.removeEventListener('pointerdown', resume);
+      };
+      window.addEventListener('pointerdown', resume);
+    });
 
     /* ---------- Text pages ------ */
     this.pages = STORY_PAGES;    // imported below
@@ -75,6 +89,10 @@ export default class IntroStoryState extends StateBase {
     this.videoEl.pause();
     this.videoEl.loop = false;
     this.videoEl.style.display = 'none';
+    if (this.bgm) {
+      this.bgm.pause();
+      this.bgm.currentTime = 0;
+    }
     this.canvas.style.backgroundImage = 'none';
     this.canvas.style.backgroundSize = '';
     this.nextBtn.removeEventListener('click', this.onClick);
@@ -89,6 +107,10 @@ export default class IntroStoryState extends StateBase {
     this.videoEl.pause();
     this.videoEl.loop = false;
     this.videoEl.style.display = 'none';
+    if (this.bgm) {
+      this.bgm.pause();
+      this.bgm.currentTime = 0;
+    }
     this.canvas.style.backgroundImage = 'none';
     this.canvas.style.backgroundSize = '';
   }
