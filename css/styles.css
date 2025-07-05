@@ -89,7 +89,7 @@ video#introVideo {
   position:absolute; inset:0;
   display:flex; flex-direction:column; justify-content:flex-end;
   padding:2rem; box-sizing:border-box;
-  background:rgba(0,0,0,0.65); /* overlay without blur so video stays sharp */
+  background:rgba(0,0,0,0.3); /* lighter overlay so video not overly dim */
   font-size:1.2rem; line-height:1.45; text-align:center;
 }
 #storyText { margin:0 auto 1.5rem; max-width:740px; }
